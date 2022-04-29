@@ -2,11 +2,10 @@
   <%= link_to :root, class: "navbar-brand" do %>
 
     <div id="logo" class="p-2" style="display: table-cell;">
-      <%# <%= cl_image_tag("buzz_reads_r1zkbs") %>
-      <%= cl_image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1647009589/ms-icon-310x310_zsl4lv.png") %>
+      <%= cl_image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1651265304/Depositphotos_386432104_S_lbpstp.jpg") %>
     </div>
     <div class="head-title px-5" style="display: table-cell;">
-      <h1 class="pt-2" id="nav-title">Buzz Reads</h1>
+      <h1 class="pt-2" id="nav-title">Student Journals Online</h1>
     </div>
     <%# <div class="head-tagline" style="display: table-cell;">
       <p>Guided Reading Made Easy</p>
@@ -22,26 +21,17 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: table-cell;">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <% if current_user.teacher %>
-          <li class="nav-item active fancy-link m-3">
-            <%= link_to "Your Reading Groups", reading_groups_path%>
-          </li>
-          <li class="nav-item active fancy-link m-3">
-            <%= link_to "Home", :root %>
-          </li>
-          <li class="nav-item fancy-link m-3">
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          </li>
-        <% else %>
-          <li class="nav-item active fancy-link m-3">
-            <%= link_to "Your Readings", daily_readings_path%>
-          </li>
-          <li class="nav-item active fancy-link m-3">
-            <%= link_to "Home", :root %>
-          </li>
-          <li class="nav-item fancy-link m-3">
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-        <% end %>
+
+        <li class="nav-item active fancy-link m-3">
+          <%= link_to "Subjects", subjects_path%>
+        </li>
+        <li class="nav-item active fancy-link m-3">
+          <%= link_to "Home", :root %>
+        </li>
+        <li class="nav-item fancy-link m-3">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        </li>
+
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
