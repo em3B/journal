@@ -1,0 +1,35 @@
+$dyslexia_background: #FFFBF7;
+$orange: #F59435;
+$light_green: #CDE17B;
+$turquoise: #7AC4BD;
+$purple: #A81375;
+$pink: #F0688C;
+
+#logo img {
+  width: 50px;
+  height: 100%;
+}
+
+.navbar-lewagon {
+  justify-content: space-between;
+  overflow: hidden;
+  background: $turquoise;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
+.navbar-lewagon .navbar-collapse {
+  // flex-grow: 0;
+  float: right;
+  margin-top: 8px;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+  vertical-align: -48%;
+}
+
+h1#nav-title {
+  color: $purple;
+}
