@@ -18,3 +18,87 @@ $light_green: #CDE17B;
 $turquoise: #7AC4BD;
 $purple: #A81375;
 $pink: #F0688C;
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  cursor: url("https://img.icons8.com/dusk/50/000000/hand-cursor.png"), auto;
+}
+
+a {
+  cursor: url("https://img.icons8.com/dusk/50/000000/hand-cursor.png"), auto;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: url("https://img.icons8.com/dusk/50/000000/hand-cursor.png"), auto;
+}
+
+// links
+.fancy-link a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  color: $purple;
+  font-weight: bold;
+}
+
+.fancy-link a::before,
+.fancy-link a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.fancy-link a::before {
+  background-color: $purple;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.fancy-link a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: $purple;
+}
+
+.fancy-link a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.fancy-link a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.fancy-link a span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.fancy-link a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+// title font
+h1#nav-title {
+  font-family: 'Kranky', cursive;
+}
