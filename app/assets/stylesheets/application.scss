@@ -102,3 +102,14 @@ a {
 h1#nav-title {
   font-family: 'Kranky', cursive;
 }
+
+// video
+.home_video {
+  position: fixed;
+  top: 81px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
