@@ -1,0 +1,36 @@
+$dyslexia_background: #FFFBF7;
+$orange: #F59435;
+$light_green: #CDE17B;
+$turquoise: #7AC4BD;
+$purple: #A81375;
+$pink: #F0688C;
+
+.footer {
+  background-color: $turquoise;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  padding: 0px 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: $purple;
+  opacity: 1;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: .15;
+}
