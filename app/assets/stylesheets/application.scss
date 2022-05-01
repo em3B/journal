@@ -113,3 +113,59 @@ h1#nav-title {
   object-fit: cover;
   z-index: -1;
 }
+
+// main buttons
+.main-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: center;
+  padding-bottom: 200px;
+}
+
+.main-btn {
+  border-radius: 7px;
+  padding: 40px;
+  margin: 50px;
+  height: 300px;
+  width: 300px;
+  background-color: $purple;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transform: translateY(3px);
+    cursor: url("https://img.icons8.com/dusk/50/000000/hand-cursor.png"), auto;
+  }
+}
+
+.main-btn a,
+h3,
+h4,
+a:hover,
+h3:hover,
+h4:hover {
+  color: $white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-img img {
+  width: 150px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#free-trial {
+  padding: 20px;
+  width: 210px;
+  height: 210px
+}
+
+#free-trial img {
+  width: 120px;
+}
