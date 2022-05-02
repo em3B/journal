@@ -33,9 +33,11 @@
         </li>
 
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+        <h1 class="fancy-link" id="nav-title">
+          <li>
+            <%= link_to "Login", new_user_session_path %>
+          </li>
+        </h1>
       <% end %>
     </ul>
   </div>
