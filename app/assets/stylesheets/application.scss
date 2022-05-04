@@ -10,6 +10,7 @@
 @import "components/navbar";
 @import "components/alert";
 @import "components/footer";
+@import "components/login";
 
 // colors
 $dyslexia_background: #FFFBF7;
@@ -18,6 +19,12 @@ $light_green: #CDE17B;
 $turquoise: #7AC4BD;
 $purple: #A81375;
 $pink: #F0688C;
+
+.wrapper {
+  background-color: $light_green;
+  margin-bottom: -100px;
+  min-height: 100%;
+}
 
 body,
 p,
@@ -51,6 +58,7 @@ a {
   display: inline-block;
   color: $purple;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .fancy-link a::before,
@@ -152,7 +160,7 @@ h4,
 a:hover,
 h3:hover,
 h4:hover {
-  color: $white;
+  color: $pink;
   font-weight: bold;
   text-decoration: none;
 }
