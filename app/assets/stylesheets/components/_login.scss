@@ -1,0 +1,42 @@
+// colors
+$dyslexia_background: #FFFBF7;
+$orange: #F59435;
+$light_green: #CDE17B;
+$turquoise: #7AC4BD;
+$purple: #A81375;
+$pink: #F0688C;
+
+.login-form {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $orange;
+  padding: 40px;
+  border-radius: 7px;
+  margin-bottom: 24px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn.btn-default.btn-primary {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($purple, $pink);
+  transition: background 0.3s ease;
+  border: 1px solid $pink;
+  margin: 10px;
+  width: 30%;
+
+  &:hover {
+    background: linear-gradient($purple, $orange);
+    color: white;
+    opacity: .8;
+  }
+}
