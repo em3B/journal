@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_03_103158) do
+ActiveRecord::Schema.define(version: 2022_05_11_230002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,10 +69,14 @@ ActiveRecord::Schema.define(version: 2022_05_03_103158) do
     t.string "password"
     t.integer "teacher_id"
     t.string "school_name"
-    t.bigint "group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["group_id"], name: "index_users_on_group_id"
+    t.string "encrypted_password"
+    t.string "email"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
   end
 
   add_foreign_key "answers", "groups"
@@ -81,5 +85,4 @@ ActiveRecord::Schema.define(version: 2022_05_03_103158) do
   add_foreign_key "entries", "subjects"
   add_foreign_key "questions", "entries"
   add_foreign_key "subjects", "groups"
-  add_foreign_key "users", "groups"
 end
