@@ -3,7 +3,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :group
+  has_many :members
+  has_many :answers
+  has_many :groups, through: :members
+  has_many :questions, through: :answers
 
   def online?
     if self.last_sign_in_at

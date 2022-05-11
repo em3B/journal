@@ -1,5 +1,5 @@
-class EntriesController < ApplicationController
 
+class EntriesController < ApplicationController
   before_action :find_entry, only: %i[show]
   attr_accessor :session_date
 
@@ -8,6 +8,7 @@ class EntriesController < ApplicationController
       if groups.users.include?(current_user)
         @group = group
       end
+
     end
 
     @entry = Entry.where(group: @group)
@@ -38,4 +39,3 @@ class EntriesController < ApplicationController
   def daily_reading_params
     params.require(:entry).permit(:session_date, :subject_id, :content, :objective, :steps, :score)
   end
-end
