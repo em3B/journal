@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_12_152905) do
+ActiveRecord::Schema.define(version: 2022_05_15_204538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,11 @@ ActiveRecord::Schema.define(version: 2022_05_12_152905) do
     t.index ["entry_id"], name: "index_questions_on_entry_id"
   end
 
+  create_table "rememberables", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "subjects", force: :cascade do |t|
     t.string "name"
     t.bigint "group_id", null: false
@@ -78,6 +83,8 @@ ActiveRecord::Schema.define(version: 2022_05_12_152905) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.integer "sign_in_count"
+    t.datetime "remember_created_at"
+    t.datetime "confirmed_at"
   end
 
   add_foreign_key "answers", "groups"
