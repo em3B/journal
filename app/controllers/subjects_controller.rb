@@ -4,4 +4,24 @@ class SubjectsController < ApplicationController
     @subjects = Subject.all
   end
 
+  def show
+    @subject = Subject.find(params[:id])
+  end
+
+  def edit
+    @subject = Subject.find(params[:id])
+  end
+
+  private
+
+  def find_subject
+    Subject.all.each do |s|
+      @subject = s if s.users.include?(current_user)
+    end
+  end
+
+  def subject_params
+    params.require(:subject).permit(:user_id, :name)
+  end
+
 end
