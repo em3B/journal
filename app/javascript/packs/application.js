@@ -26,7 +26,18 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 import { animation } from "../components/title";
+import { greeting } from "../components/subjects"
 
 document.addEventListener('turbolinks:load', () => {
-  animation();
+  const letters = document.querySelector(".text-wrapper");
+  var textWrapper = document.querySelector('.ml16');
+
+  if (textWrapper) {
+    animation();
+  }
+
+  if (letters) {
+    console.log("hi");
+    greeting();
+  }
 });
