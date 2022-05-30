@@ -26,3 +26,19 @@ $pink: #F0688C;
   display: inline-block;
   line-height: 1em;
 }
+
+.cover-img img {
+  width: 120px;
+  height: 180px;
+  border-radius: 4px;
+  padding-bottom: 10px;
+}
+
+.cover-img h3 {
+  position: fixed;
+  bottom: 10px;
+}
+
+.invisible {
+  display: none;
+}
