@@ -7,24 +7,53 @@
     </span>
   </h1>
   <%# teacher content: main heading %>
-  <h1 class="text-center">What would you like to do today?</h1>
+  <h1 class="text-center instructions">What would you like to do today?</h1>
   <%# teacher content: main buttons %>
-  <div class="main-btn-group text-center teacher-btn">
-    <div class="main-btn">
+  <div class="main-btn-group text-center teacher-btn-main">
+    <div class="main-btn see-subjects">
       <div class="cover-img">
         <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
       </div>
       <h3>See My Subjects</h3>
     </div>
 
-     <div class="main-btn">
+     <div class="main-btn edit-subjects">
       <div class="cover-img">
         <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
       </div>
-      <h3>Edit My Subjects</h3>
+      <h4>Change Subjects or Students</h4>
     </div>
   </div>
 
   <%# If teacher clicks on See My Subjects %>
+
   <%# If teacher clicks on Edit My Subjects %>
+
+  <div class="invisible main-btn-group text-center teacher-btn-edit">
+    <div class="main-btn more-edit">
+      <div class="cover-img">
+        <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
+      </div>
+      <h3>Add a Subject</h3>
+    </div>
+    <div class="main-btn more-edit">
+      <div class="cover-img">
+        <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
+      </div>
+      <h3>Delete a Subject</h3>
+    </div>
+    <div class="main-btn more-edit">
+      <div class="cover-img">
+        <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
+      </div>
+      <h4>Change Students in a Subject</h4>
+    </div>
+    <div class="main-btn more-edit">
+      <div class="cover-img">
+        <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
+      </div>
+      <h3>Add or Remove a Class List</h3>
+    </div>
+  </div>
+
 </div>
