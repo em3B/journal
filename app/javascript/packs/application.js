@@ -26,18 +26,23 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 import { animation } from "../components/title";
-import { greeting } from "../components/subjects"
+import { greeting } from "../components/subjects";
+import { editSubjects } from "../components/teacherEdit";
 
 document.addEventListener('turbolinks:load', () => {
   const letters = document.querySelector(".text-wrapper");
   var textWrapper = document.querySelector('.ml16');
+  const teacherHome = document.querySelector('.teacher-btn-main');
 
   if (textWrapper) {
     animation();
   }
 
   if (letters) {
-    console.log("hi");
     greeting();
+  }
+
+  if (teacherHome) {
+    editSubjects();
   }
 });
