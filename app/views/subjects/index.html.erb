@@ -30,12 +30,14 @@
   <%# If teacher clicks on Edit My Subjects %>
 
   <div class="invisible main-btn-group text-center teacher-btn-edit">
-    <div class="main-btn more-edit">
-      <div class="cover-img">
-        <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
+    <%= link_to new_subject_path do  %>
+      <div class="main-btn more-edit">
+        <div class="cover-img">
+          <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
+        </div>
+        <h3>Add a Subject</h3>
       </div>
-      <h3>Add a Subject</h3>
-    </div>
+    <% end %>
     <div class="main-btn more-edit">
       <div class="cover-img">
         <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
