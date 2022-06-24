@@ -1,3 +1,31 @@
 <div class="wrapper">
   <div class="push"></div>
+
+  <%# headline %>
+
+  <h1 class="ml7 text-center">
+    <span class="text-wrapper">
+      <span class="letters">Add a Subject!</span>
+    </span>
+  </h1>
+
+  <%# form for new subject %>
+
+  <%= simple_form_for [@subject] do |f|  %>
+    <%= f.input :name, :label => 'Subject Name' %>
+    <h3>Would you like to assign this subject to a class?</h3>
+    <div class="yes-no">
+      <div class="box">
+        <%= f.check_box :class_boolean, id: :one %>
+        <span class="check"></span>
+        <%= f.label :yes, for: :one  %>
+      </div>
+      <div class="box">
+        <%= f.check_box :class_boolean, id: :two %>
+        <span class="check"></span>
+        <%= f.label :no, for: :two  %>
+      </div>
+    </div>
+  <% end %>
+
 </div>
