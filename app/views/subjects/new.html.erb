@@ -11,21 +11,23 @@
 
   <%# form for new subject %>
 
-  <%= simple_form_for [@subject] do |f|  %>
-    <%= f.input :name, :label => 'Subject Name' %>
-    <h3>Would you like to assign this subject to a class?</h3>
-    <div class="yes-no">
-      <div class="box">
-        <%= f.check_box :class_boolean, id: :one %>
-        <span class="check"></span>
-        <%= f.label :yes, for: :one  %>
+  <div class="form-body">
+    <%= simple_form_for [@subject] do |f|  %>
+      <%= f.input :name, :label => 'Subject Name' %>
+      <h3 class="text-dark">Would you like to assign this subject to a class?</h3>
+      <div class="yes-no">
+        <div class="box">
+          <%= f.check_box :class_boolean, id: :one %>
+          <span class="check"></span>
+          <%= f.label :yes, for: :one  %>
+        </div>
+        <div class="box">
+          <%= f.check_box :class_boolean, id: :two %>
+          <span class="check"></span>
+          <%= f.label :no, for: :two  %>
+        </div>
       </div>
-      <div class="box">
-        <%= f.check_box :class_boolean, id: :two %>
-        <span class="check"></span>
-        <%= f.label :no, for: :two  %>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 
 </div>
