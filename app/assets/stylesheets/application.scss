@@ -21,6 +21,10 @@ $turquoise: #7AC4BD;
 $purple: #A81375;
 $pink: #F0688C;
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   background-color: $light_green;
   margin-bottom: -100px;

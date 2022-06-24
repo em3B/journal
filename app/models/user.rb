@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   has_many :members
   has_many :answers
-  has_many :groups, through: :members
+  has_many :classes, through: :members
   has_many :questions, through: :answers
 
   attr_accessor :email, :password,
