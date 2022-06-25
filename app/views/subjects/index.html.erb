@@ -50,12 +50,14 @@
       </div>
       <h4>Change Students in a Subject</h4>
     </div>
-    <div class="main-btn more-edit">
-      <div class="cover-img">
-        <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
+    <%= link_to new_group_path do  %>
+      <div class="main-btn more-edit">
+        <div class="cover-img">
+          <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1653932681/Depositphotos_404606460_S_cmj2t6.jpg")  %>
+        </div>
+        <h3>Add or Remove a Class List</h3>
       </div>
-      <h3>Add or Remove a Class List</h3>
-    </div>
+    <% end %>
   </div>
 
 </div>
