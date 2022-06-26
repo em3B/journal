@@ -7,6 +7,14 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    add_user
+  end
+
+  def add_user
+    @member = Member.new
+    @member.group_id = @group.id
+    @user = @member.user
+    # @user.id = @member.user_id
   end
 
   def create
@@ -31,13 +39,11 @@ class GroupsController < ApplicationController
 
   private
 
-  def find_group
-    Group.all.each do |g|
-      @group = g if g.users.include?(current_user)
-    end
-  end
+  def member_params
+    params.require(:member).permit(:group_id, :user_id)
   end
 
   def group_params
     params.require(:group).permit(:user_id, :name)
   end
+end

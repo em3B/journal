@@ -12,13 +12,20 @@
   <%# form for new class %>
 
   <div class="form-body">
-    <%= simple_form_for(@group) do |f|  %>
+    <%= simple_form_for [@group] do |f|  %>
+
+      <%# add class name %>
+
       <%= f.input :name, :label => 'Class Name' %>
 
-      <h3 class="text-dark">Add students to this class:</h3>
+      <%# add student names %>
 
+      <h3 class="text-dark p-4">Add students to this class:</h3>
+      <%= f.input :users, :label => 'Student Name', :method =>  'add_user' %>
 
-      <h3 class="text-dark">Would you like to assign subjects to this class?</h3>
+      <%# assign subjects %>
+
+      <h3 class="text-dark p-4">Would you like to assign subjects to this class?</h3>
       <div class="yes-no">
         <div class="box">
           <%= f.check_box :subject_boolean, id: :one %>
