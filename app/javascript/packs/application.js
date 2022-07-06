@@ -9,7 +9,6 @@
 //= require turbolinks
 //= require_tree .
 
-
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
@@ -28,11 +27,13 @@ import "bootstrap";
 import { animation } from "../components/title";
 import { greeting } from "../components/subjects";
 import { editSubjects } from "../components/teacherEdit";
+import { assignClass } from "../components/assignClass";
 
 document.addEventListener('turbolinks:load', () => {
   const letters = document.querySelector(".text-wrapper");
   var textWrapper = document.querySelector('.ml16');
   const teacherHome = document.querySelector('.teacher-btn-main');
+  const question = document.querySelector(".yes-no");
 
   if (textWrapper) {
     animation();
@@ -44,5 +45,9 @@ document.addEventListener('turbolinks:load', () => {
 
   if (teacherHome) {
     editSubjects();
+  }
+
+  if (question) {
+    assignClass();
   }
 });
