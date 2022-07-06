@@ -25,19 +25,30 @@
 
       <%# assign subjects %>
 
-      <h3 class="text-dark p-4">Would you like to assign subjects to this class?</h3>
+      <h3 class="p-3 question-heading text-dark" >Would you like to assign subjects to this class?</h3>
       <div class="yes-no">
-        <div class="box">
+        <div class="box" >
           <%= f.check_box :subject_boolean, id: :one %>
           <span class="check"></span>
-          <%= f.label :yes, for: :one  %>
+          <%= f.label :yes, for: :one %>
         </div>
-        <div class="box">
+        <div class="box" >
           <%= f.check_box :subject_boolean, id: :two %>
           <span class="check"></span>
-          <%= f.label :no, for: :two  %>
+          <%= f.label :no, for: :two %>
         </div>
       </div>
+
+      <%# list of subjects to select %>
+
+      <div class="select-subjects invisible">
+        <% @subjects.each do |subject| %>
+          <%= f.input :name, class: :box  %>
+        <% end %>
+      </div>
+
+      <%= f.button :submit, 'Submit', class: "primary-btn" %>
+
     <% end %>
   </div>
 
