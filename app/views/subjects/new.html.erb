@@ -14,7 +14,7 @@
   <div class="form-body">
     <%= simple_form_for [@subject] do |f|  %>
       <%= f.input :name, :label => 'Subject Name' %>
-      <h3 class="text-dark">Would you like to assign this subject to a class?</h3>
+      <h3 class="text-dark">Would you like to assign a class to this subject?</h3>
       <div class="yes-no">
         <div class="box">
           <%= f.check_box :class_boolean, id: :one %>
