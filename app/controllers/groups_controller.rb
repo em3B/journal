@@ -12,9 +12,10 @@ class GroupsController < ApplicationController
   end
 
   def add_user
-    @member = Member.new
-    @member.group_id = @group.id
-    @user = @member.user
+    @members = Member.all
+    @member = Member.create(group_id: @group.id)
+    @user = User.new
+    @user.id = @member.user_id
     # @user.id = @member.user_id
   end
 

@@ -42,3 +42,20 @@ $pink: #F0688C;
 .invisible {
   display: none;
 }
+
+.input-add img {
+  width: 72px;
+  height: 100%;
+}
+
+.single-input {
+  background-color: $pink;
+  border-radius: 7px;
+  padding: 32px;
+  margin: 16px;
+  width: 380px;
+}
+
+input[type=text] {
+  width: 300px;
+}

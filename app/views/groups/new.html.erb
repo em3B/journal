@@ -21,7 +21,15 @@
       <%# add student names %>
 
       <h3 class="text-dark p-4">Add students to this class:</h3>
-      <%= f.input :users, :label => 'Student Name', :method =>  'add_user' %>
+
+      <div class="single-input text-center">
+        <%= f.input :users, :label => 'Student Name', :value => @user.username, :method =>  'add_user' %>
+        <%= f.input :users, :label => 'Student Email', :value => @user.email, :method =>  'add_user' %>
+        <%= f.input :users, :label => 'Student Password', :value => @user.password, :method =>  'add_user' %>
+        <div class="input-add">
+          <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1657545279/Depositphotos_13203627_S_uydpbw.png")  %>
+        </div>
+      </div>
 
       <%# assign subjects %>
 
@@ -51,5 +59,7 @@
 
     <% end %>
   </div>
-
+  <div class="push"></div>
+  <div class="push"></div>
+  <div class="push"></div>
 </div>
