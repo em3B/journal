@@ -7,6 +7,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    @user = User.new
     add_user
     @subjects = Subject.all
   end
