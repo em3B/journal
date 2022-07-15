@@ -22,14 +22,20 @@
 
       <h3 class="text-dark p-4">Add students to this class:</h3>
 
-      <div class="single-input text-center">
-        <%= f.input :users, :label => 'Student Name', :value => @user.username, :method =>  'add_user' %>
-        <%= f.input :users, :label => 'Student Email', :value => @user.email, :method =>  'add_user' %>
-        <%= f.input :users, :label => 'Student Password', :value => @user.password, :method =>  'add_user' %>
-        <div class="input-add">
-          <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1657545279/Depositphotos_13203627_S_uydpbw.png")  %>
+      <%= simple_form_for [@user] do |f|  %>
+
+        <div class="single-input text-center">
+          <%= f.input :username, :label => 'Student Name' %>
+          <%= f.input :email, :label => 'Student Email' %>
+          <%= f.input :password, :label => 'Student Password' %>
+          <div class="input-add">
+            <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1657545279/Depositphotos_13203627_S_uydpbw.png")  %>
+          </div>
         </div>
-      </div>
+        <br>
+        <%= f.button :submit, 'Submit Students', class: "primary-btn" %>
+        <br>
+      <% end %>
 
       <%# assign subjects %>
 
