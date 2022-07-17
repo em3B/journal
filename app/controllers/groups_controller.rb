@@ -8,17 +8,20 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @user = User.new
-    add_user
+    @member = Member.new
+    @user.id = @member.user_id
+    @member.group_id = @group.id
+    # add_user
     @subjects = Subject.all
   end
 
-  def add_user
-    @members = Member.all
-    @member = Member.create(group_id: @group.id)
-    @user = User.new
-    @user.id = @member.user_id
-    # @user.id = @member.user_id
-  end
+  # def add_user
+  #   @members = Member.all
+  #   @member = Member.create(group_id: @group.id)
+  #   @user = User.new
+  #   @user.id = @member.user_id
+  #   # @user.id = @member.user_id
+  # end
 
   def create
     @group = Group.new(group_params)
