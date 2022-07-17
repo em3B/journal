@@ -28,12 +28,14 @@ import { animation } from "../components/title";
 import { greeting } from "../components/subjects";
 import { editSubjects } from "../components/teacherEdit";
 import { assignClass } from "../components/assignClass";
+import { addStudents } from "../components/addStudents";
 
 document.addEventListener('turbolinks:load', () => {
   const letters = document.querySelector(".text-wrapper");
   var textWrapper = document.querySelector('.ml16');
   const teacherHome = document.querySelector('.teacher-btn-main');
   const question = document.querySelector(".yes-no");
+  const studentForm = document.querySelector(".single-input");
 
   if (textWrapper) {
     animation();
@@ -49,5 +51,9 @@ document.addEventListener('turbolinks:load', () => {
 
   if (question) {
     assignClass();
+  }
+
+  if (studentForm) {
+    addStudents();
   }
 });
