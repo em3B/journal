@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-
+  User.connection()
+  include Abyme::Model
   # devise :database_authenticatable, :registerable,
   #        :recoverable, :rememberable, :trackable, :validatable
 

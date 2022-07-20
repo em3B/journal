@@ -31,6 +31,9 @@ gem 'turbolinks', '~> 5'
 
 gem 'jquery-rails'
 
+# forms
+gem 'abyme', '~> 0.6.6'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

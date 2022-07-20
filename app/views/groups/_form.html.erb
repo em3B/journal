@@ -1,0 +1,8 @@
+<%= simple_form_for @group do |f| %>
+
+  <%= f.abyme_for(:users, min_count: 1) do |abyme| %>
+    <%= abyme.records %>
+    <%= abyme.new_records %>
+    <%= add_associated_record %>
+  <% end %>
+<% end %>
