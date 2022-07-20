@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :groups
+
   devise_for :users, :controllers => { :registrations => "users", :sessions => "sessions" }
 
   devise_for :users, skip: [:passswords, :sessions]

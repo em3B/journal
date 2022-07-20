@@ -9,6 +9,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    abyme (0.6.6)
     actioncable (6.1.5.1)
       actionpack (= 6.1.5.1)
       activesupport (= 6.1.5.1)
@@ -233,6 +234,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  abyme (~> 0.6.6)
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
