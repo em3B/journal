@@ -4,7 +4,7 @@ class Group < ApplicationRecord
   attr_accessor :add_name, :delete_name
 
   has_many :members
-  has_many :users, through: :members
+  has_many :users, through: :members, dependent: :destroy
   abymize :users, permit: :all_attributes
 
   abymize :users, permit: :all_attributes

@@ -36,7 +36,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @answer = Answer.new
+    # @answer = Answer.new
   end
 
   def edit
@@ -50,6 +50,7 @@ class GroupsController < ApplicationController
   end
 
   def group_params
-    params.require(:group).permit(abyme_attributes, :user_id, :name)
+    params.require(:group).permit(abyme_attributes, :user_id, :name,
+                                  user_attributes: %(id, username, email, password))
   end
 end
