@@ -12,13 +12,18 @@ class User < ApplicationRecord
     :trackable,
     :validatable
 
+  belongs_to :group
   has_many :members
   has_many :answers
-  has_many :classes, through: :members
+  has_many :groups, through: :members
   has_many :questions, through: :answers
 
   attr_accessor :email, :password,
                   :password_confirmation, :remember_me
+
+  validates :username, presence: true
+  validates :email, presence: true
+  validates :password, presence: true
 
   def online?
     if self.last_sign_in_at

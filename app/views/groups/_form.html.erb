@@ -1,8 +1,85 @@
-<%= simple_form_for @group do |f| %>
+  <%# form for new class %>
 
-  <%= f.abyme_for(:users, min_count: 1) do |abyme| %>
-    <%= abyme.records %>
-    <%= abyme.new_records %>
-    <%= add_associated_record %>
-  <% end %>
-<% end %>
+  <div class="form-body">
+    <%= simple_form_for [@group] do |f|  %>
+
+      <%# add class name %>
+
+      <%= f.input :name, :label => 'Class Name' %>
+
+      <%# add student names %>
+
+      <h3 class="text-dark add-student-heading p-4">Add students to this class:</h3>
+
+      <div class="single-input text-center">
+
+        <%= simple_form_for([@user]) do |u|  %>
+          <%= u.abyme_for(:user, min_count: 1) do |abyme| %>
+            <%= u.input :username %>
+
+            <%= u.hidden_field :_destroy %>
+
+            <%= u.input :email %>
+
+            <%= u.hidden_field :_destroy %>
+
+            <%= u.input :password %>
+
+            <%= u.hidden_field :_destroy %>
+
+
+              <%= remove_associated_record(content: "Remove user") %>
+
+              <%= add_associated_record(content: 'Add user') %>
+
+          <% end %>
+        <% end %>
+		  </div>
+
+
+
+        <%# <div class="input-add">
+          <%= image_tag("https://res.cloudinary.com/dm37aktki/image/upload/v1657545279/Depositphotos_13203627_S_uydpbw.png")  %>
+        <%# </div> %>
+      </div>
+
+      <%# <br>
+      <%= f.button :submit, 'Submit Students', class: "primary-btn" %>
+      <%# <br> %>
+
+
+
+      <%# assign subjects %>
+
+      <h3 class="p-3 question-heading text-dark text-center" >Would you like to assign subjects to this class?</h3>
+      <div class="yes-no d-flex justify-content-center">
+        <div class="box" >
+          <%= f.check_box :subject_boolean, id: :one %>
+          <span class="check"></span>
+          <%= f.label :yes, for: :one %>
+        </div>
+        <div class="box" >
+          <%= f.check_box :subject_boolean, id: :two %>
+          <span class="check"></span>
+          <%= f.label :no, for: :two %>
+        </div>
+      </div>
+
+      <%# list of subjects to select %>
+
+      <div class="select-subjects invisible">
+        <% @subjects.each do |subject| %>
+          <%= f.input :name, class: :box  %>
+        <% end %>
+      </div>
+
+      <br>
+      <br>
+      <%= f.button :submit, 'Submit', class: "primary-btn" %>
+
+    <% end %>
+
+    <div class="push"></div>
+    <div class="push"></div>
+    <div class="push"></div>
+  </div>
